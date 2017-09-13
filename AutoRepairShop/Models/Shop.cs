@@ -20,12 +20,40 @@ namespace AutoRepairShop.Models
         private string city;
         private string phone;
         private string email;
+        private List<Customer> customers;
 
         //2st part of a class - constructor
         public Shop(string Name)
         {
             name = Name;
+            customers = new List<Customer>();
         }
+
+        /// <summary>
+        /// Adds a new customer to the list/shop
+        /// </summary>
+        /// <param name="customer"></param>
+        public void AddCustomer(Customer customer)
+        {
+            customers.Add(customer);
+        }
+
+        public Customer FindCustomer(int id)
+        {
+            //loop through the list for/while?
+            //return the found customer
+            foreach(Customer myCustomer in customers)
+            {
+                if(myCustomer.Id == id)
+                {
+                    return myCustomer;
+                }
+                // we dont write else statment because we want to continue the loop
+            }
+            //if we get down here we did not find the customer
+            return null;
+        }
+
         //in order to protect our data we encapsulate
         // protect our private data and show this to the rest of the world
         public string Name

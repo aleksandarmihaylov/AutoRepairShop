@@ -11,16 +11,16 @@ namespace AutoRepairShop.Models
         private int id;
         private string firstName;
         private string lastName;
-        public string fullName;
         private string address;
         private string city;
         private string zip;
         private string phone;
         private string email;
 
-        public Customer(int Id)
+        public Customer(int Id,string Phone)
         {
             id = Id;
+            phone = Phone;
         }
 
         public int Id
@@ -37,6 +37,10 @@ namespace AutoRepairShop.Models
             {
                 return firstName;
             }
+            set
+            {
+                firstName = value;
+            }
         }
 
         public string LastName
@@ -45,9 +49,13 @@ namespace AutoRepairShop.Models
             {
                 return lastName;
             }
+            set
+            {
+                lastName = value;
+            }
         }
 
-        public string FullName
+        public string fullName
         {
             get
             {
@@ -61,6 +69,10 @@ namespace AutoRepairShop.Models
             {
                 return address;
             }
+            set
+            {
+                address = value;
+            }
         }
 
         public string Zip
@@ -68,6 +80,10 @@ namespace AutoRepairShop.Models
             get
             {
                 return zip;
+            }
+            set
+            {
+                zip = value;
             }
         }
 
@@ -77,6 +93,10 @@ namespace AutoRepairShop.Models
             {
                 return city;
             }
+            set
+            {
+                city = value;
+            }
         }
 
         public string Phone
@@ -85,6 +105,10 @@ namespace AutoRepairShop.Models
             {
                 return phone;
             }
+            set
+            {
+                phone = value;
+            }
         }
 
         public string Email
@@ -92,6 +116,10 @@ namespace AutoRepairShop.Models
             get
             {
                 return email;
+            }
+            set
+            {
+                email = value;
             }
         }
 
