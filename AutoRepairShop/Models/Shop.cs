@@ -21,12 +21,14 @@ namespace AutoRepairShop.Models
         private string phone;
         private string email;
         private List<Customer> customers;
+        private List<Employee> employees;
 
         //2st part of a class - constructor
         public Shop(string Name)
         {
             name = Name;
             customers = new List<Customer>();
+            employees = new List<Employee>();
         }
 
         /// <summary>
@@ -35,7 +37,7 @@ namespace AutoRepairShop.Models
         /// <param name="customer"></param>
         public void AddCustomer(Customer customer)
         {
-            customers.Add(customer);
+                customers.Add(customer);
         }
 
         public Customer FindCustomer(int id)
@@ -53,6 +55,29 @@ namespace AutoRepairShop.Models
             //if we get down here we did not find the customer
             return null;
         }
+        /// <summary>
+        ///    Adds a new employee to the list/shop
+        /// </summary>
+        /// <param name="employee"></param>
+        public void AddEmployee(Employee employee)
+        {
+            employees.Add(employee);
+        }
+
+        public Employee FindEmployee(int id)
+        {
+            foreach (Employee myEmployee in employees)
+            {
+                if(myEmployee.Id == id)
+                {
+                    return myEmployee;
+                }
+            }
+            //if we get down here we did not find the employee
+            return null;
+        }
+
+
 
         //in order to protect our data we encapsulate
         // protect our private data and show this to the rest of the world

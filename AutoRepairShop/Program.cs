@@ -23,6 +23,13 @@ namespace AutoRepairShop
             myshop.AddCustomer(myCustomer);
             //find the customer again
             Customer myFoundCustomer = myshop.FindCustomer(1);
+            //create an employe
+            Employee myEmployee = new Employee(1);
+            //add the employe to the shop
+            myshop.AddEmployee(myEmployee);
+            //find the employe again
+            Employee myFoundEmployee = myshop.FindEmployee(1);
+
         }
     }
 }
