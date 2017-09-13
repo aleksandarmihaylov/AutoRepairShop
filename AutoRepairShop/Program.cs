@@ -16,9 +16,8 @@ namespace AutoRepairShop
             // create a customer
             Customer myCustomer = new Customer(nextCustomerNumber, "12345678");
             nextCustomerNumber++;
-            //continue to set the properties
-            myCustomer.FirstName = "John";
-            myCustomer.LastName = "Smith";
+            //set the properties on customer
+            myCustomer.
             //add the customer to the shop
             myshop.AddCustomer(myCustomer);
             //find the customer again

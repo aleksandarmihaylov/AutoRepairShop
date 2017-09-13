@@ -6,123 +6,25 @@ using System.Threading.Tasks;
 
 namespace AutoRepairShop.Models
 {
-    public class Customer
+    public class Customer : Person
     {
-        private int id;
-        private string firstName;
-        private string lastName;
-        private string address;
-        private string city;
-        private string zip;
-        private string phone;
-        private string email;
+        private string companyName;
 
-        public Customer(int Id,string Phone)
+        public Customer(int Id,string Phone) : base(Id, Phone)
         {
-            id = Id;
-            phone = Phone;
+
         }
 
-        public int Id
+        public string CompanyName
         {
             get
             {
-                return id;
-            }
-        }
-
-        public string FirstName
-        {
-            get
-            {
-                return firstName;
+                return companyName;
             }
             set
             {
-                firstName = value;
+                companyName = value;
             }
         }
-
-        public string LastName
-        {
-            get
-            {
-                return lastName;
-            }
-            set
-            {
-                lastName = value;
-            }
-        }
-
-        public string fullName
-        {
-            get
-            {
-                return firstName + " " + lastName;
-            }
-        }
-
-        public string Adress
-        {
-            get
-            {
-                return address;
-            }
-            set
-            {
-                address = value;
-            }
-        }
-
-        public string Zip
-        {
-            get
-            {
-                return zip;
-            }
-            set
-            {
-                zip = value;
-            }
-        }
-
-        public string City
-        {
-            get
-            {
-                return city;
-            }
-            set
-            {
-                city = value;
-            }
-        }
-
-        public string Phone
-        {
-            get
-            {
-                return phone;
-            }
-            set
-            {
-                phone = value;
-            }
-        }
-
-        public string Email
-        {
-            get
-            {
-                return email;
-            }
-            set
-            {
-                email = value;
-            }
-        }
-
-
     }
 }
