@@ -31,12 +31,20 @@ namespace AutoRepairShop
             //find the employe again
             Employee myFoundEmployee = myshop.FindEmployee(1);
             // creating an invoice
-            Invoice myFirstInvoice = new Invoice(1, myFoundCustomer);
+            Invoice myFirstInvoice = new Invoice(1, myCustomer);
             //set properties on the invoice
             myFirstInvoice.Description = "This is the first invoice from my first customer";
             //add the invoice to the customer
             myCustomer.AddInvoice(myFirstInvoice);
-            Console.WriteLine(myFoundCustomer.Name);
+            //create a car
+            Car myFirstCar = new Car(myCustomer);
+            //set properties on the car
+            myFirstCar.Licenseplate = "BG 1032 CM";
+            //add the car to the customer
+            myCustomer.AddCar(myFirstCar);
+            //find the car 
+            Car myFoundCar = myCustomer.FindCar("BG 1032 CM");
+            Console.WriteLine("My çar's license plate is " + myFoundCar.Licenseplate);
 
         }
     }
