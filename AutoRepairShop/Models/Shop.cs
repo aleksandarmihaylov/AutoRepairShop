@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace AutoRepairShop.Models
 {
+
+    /// <summary>
+    /// This class is a Auto Repair shop and represent only a snigle shop.
+    /// </summary>
     public class Shop
     {
         //private inside the class
+        //1st part of a class - attributes, fields
         private string name;
         private string address;
         private string zip;
@@ -16,15 +21,10 @@ namespace AutoRepairShop.Models
         private string phone;
         private string email;
 
-        //constructor
-        public Shop(string Name, string Adress, string Zip, string City, string Phone, string Email)
+        //2st part of a class - constructor
+        public Shop(string Name)
         {
             name = Name;
-            address = Adress;
-            zip = Zip;
-            city = City;
-            phone = Phone;
-            email = Email;
         }
         //in order to protect our data we encapsulate
         // protect our private data and show this to the rest of the world
