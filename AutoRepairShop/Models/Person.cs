@@ -46,7 +46,7 @@ namespace AutoRepairShop.Models
         {
             get
             {
-                return address
+                return address;
             }
             set
             {
